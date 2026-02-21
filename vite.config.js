@@ -8,12 +8,12 @@ export default defineConfig({
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'stitch_website/index.html'),
-                about: resolve(__dirname, 'stitch_website/about.html'),
-                contact: resolve(__dirname, 'stitch_website/contact.html'),
-                global: resolve(__dirname, 'stitch_website/global_companies.html'),
-                indian: resolve(__dirname, 'stitch_website/indian_businesses.html'),
-                how: resolve(__dirname, 'stitch_website/how_we_work.html')
+                main: resolve(__dirname, 'index.html'),
+                about: resolve(__dirname, 'about.html'),
+                contact: resolve(__dirname, 'contact.html'),
+                global: resolve(__dirname, 'global_companies.html'),
+                indian: resolve(__dirname, 'indian_businesses.html'),
+                how: resolve(__dirname, 'how_we_work.html')
             }
         }
     },
