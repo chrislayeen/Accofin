@@ -9,6 +9,16 @@
         content="AccoFin Consultancy is a trusted financial and tax consultancy in Kerala, specializing in business setup, finance operations, and compliance for Indian and global companies." />
     <meta name="keywords"
         content="Financial Consultancy, Tax Services, Kerala, AccoFin, Accounting, Business Setup, GST Filing" />
+
+    <!-- Open Graph / SEO Excellence -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.accofin.com/" />
+    <meta property="og:title" content="Trusted Financial & Tax Consultancy in Kerala | AccoFin Consultancy" />
+    <meta property="og:description"
+        content="Strategic financial and tax consultancy specialization for global excellence and Indian market depth." />
+    <meta property="og:image" content="https://www.accofin.com/social-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,30 +41,8 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#2B7CB6",
-                        secondary: "#1E293B",
-                        "navy-dark": "#0F172A",
-                        "background-light": "#F8F9FB",
-                        "background-dark": "#0F172A",
-                        "card-dark": "#1E293B",
-                        "text-light": "#334155",
-                        "text-dark": "#e2e8f0",
-                        "accent-gold": "#B3902A",
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Google Sans Flex"', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="tailwind.config.js?v=__SITE_VERSION__"></script>
     <script>const VERSION = "__SITE_VERSION__";</script>
     <link rel="stylesheet" href="main.93hf82.css?v=__SITE_VERSION__" />
 </head>
@@ -83,14 +71,16 @@
                                 class="text-gray-500 font-normal text-lg ml-1 hidden lg:inline">Consultancy</span></span>
                     </a>
 
-                    <!-- Strategic Segment Switcher (Grouping with Logo) -->
                     <div
-                        class="hidden lg:flex bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full p-1 border border-gray-200/50 dark:border-gray-700/50">
+                        class="hidden lg:flex relative bg-gray-100/50 dark:bg-gray-800/80 backdrop-blur-md rounded-full p-1 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden">
+                        <div id="segment-pill"
+                            class="absolute inset-y-1 bg-white dark:bg-gray-700 shadow-sm rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none">
+                        </div>
                         <a href="global_companies.html" data-segment="global"
-                            class="px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full">Global
+                            class="relative px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full z-10">Global
                             Companies</a>
                         <a href="indian_businesses.html" data-segment="indian"
-                            class="px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full">Indian
+                            class="relative px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full z-10">Indian
                             Businesses</a>
                     </div>
                 </div>
@@ -118,11 +108,14 @@
                 <div class="md:hidden flex items-center gap-4">
                     <!-- Compact Mobile Segment Switcher -->
                     <div
-                        class="flex bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-0.5 border border-gray-200/50 dark:border-gray-700/50">
+                        class="flex relative bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-0.5 border border-gray-200/50 dark:border-gray-700/50">
+                        <div id="mobile-segment-pill"
+                            class="absolute inset-y-0.5 bg-white dark:bg-gray-700 shadow-sm rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none">
+                        </div>
                         <a href="global_companies.html" data-segment="global"
-                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Global</a>
+                            class="relative px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full z-10">Global</a>
                         <a href="indian_businesses.html" data-segment="indian"
-                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Indian</a>
+                            class="relative px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full z-10">Indian</a>
                     </div>
                     <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2 -mr-2">
                         <span class="material-icons-outlined text-2xl">menu</span>
@@ -490,8 +483,10 @@
                         </div>
 
                         <div class="mb-8 relative z-10">
-                            <span
-                                class="material-icons-outlined text-[40px] text-primary dark:text-blue-400 mb-6 block transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-gold origin-left">receipt_long</span>
+                            <div
+                                class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-icons-outlined text-[32px] icon-duotone">receipt_long</span>
+                            </div>
                             <h3
                                 class="text-2xl font-serif font-bold text-secondary dark:text-white leading-tight tracking-tight mb-2">
                                 GST & Tax Compliance</h3>
@@ -540,8 +535,10 @@
                         </div>
 
                         <div class="mb-8 relative z-10">
-                            <span
-                                class="material-icons-outlined text-[40px] text-primary dark:text-blue-400 mb-6 block transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-gold origin-left">account_balance</span>
+                            <div
+                                class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-icons-outlined text-[32px] icon-duotone">account_balance</span>
+                            </div>
                             <h3
                                 class="text-2xl font-serif font-bold text-secondary dark:text-white leading-tight tracking-tight mb-2">
                                 Accounting & MIS</h3>
@@ -595,8 +592,10 @@
                         </div>
 
                         <div class="mb-8 relative z-10">
-                            <span
-                                class="material-icons-outlined text-[40px] text-primary dark:text-blue-400 mb-6 block transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-gold origin-left">domain_add</span>
+                            <div
+                                class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-icons-outlined text-[32px] icon-duotone">domain_add</span>
+                            </div>
                             <h3
                                 class="text-2xl font-serif font-bold text-secondary dark:text-white leading-tight tracking-tight mb-2">
                                 India Entry & Setup</h3>
@@ -642,8 +641,10 @@
                         </div>
 
                         <div class="mb-8 relative z-10">
-                            <span
-                                class="material-icons-outlined text-[40px] text-primary dark:text-blue-400 mb-6 block transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-gold origin-left">groups</span>
+                            <div
+                                class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-icons-outlined text-[32px] icon-duotone">groups</span>
+                            </div>
                             <h3
                                 class="text-2xl font-serif font-bold text-secondary dark:text-white leading-tight tracking-tight mb-2">
                                 Payroll & Labour</h3>
@@ -680,8 +681,10 @@
                         </div>
 
                         <div class="mb-8 relative z-10">
-                            <span
-                                class="material-icons-outlined text-[40px] text-primary dark:text-blue-400 mb-6 block transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-gold origin-left">analytics</span>
+                            <div
+                                class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-icons-outlined text-[32px] icon-duotone">analytics</span>
+                            </div>
                             <h3
                                 class="text-2xl font-serif font-bold text-secondary dark:text-white leading-tight tracking-tight mb-2">
                                 Due Diligence</h3>
@@ -718,8 +721,10 @@
                         </div>
 
                         <div class="mb-8 relative z-10">
-                            <span
-                                class="material-icons-outlined text-[40px] text-primary dark:text-blue-400 mb-6 block transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-gold origin-left">security</span>
+                            <div
+                                class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-icons-outlined text-[32px] icon-duotone">security</span>
+                            </div>
                             <h3
                                 class="text-2xl font-serif font-bold text-secondary dark:text-white leading-tight tracking-tight mb-2">
                                 Data Governance</h3>
@@ -802,8 +807,10 @@
                             <!-- Point 1: Expert Advisory -->
                             <div class="group flex gap-6 items-start transition-all duration-300">
                                 <div class="flex-shrink-0 mt-1">
-                                    <span
-                                        class="material-icons-outlined text-accent-gold text-3xl group-hover:scale-110 transition-transform duration-500">verified_user</span>
+                                    <div
+                                        class="glass-jewel w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-sm border border-gray-100 dark:border-gray-800">
+                                        <span class="material-icons-outlined icon-duotone text-2xl">verified_user</span>
+                                    </div>
                                 </div>
                                 <div class="border-l border-gray-100 dark:border-gray-800 pl-6">
                                     <p
@@ -820,8 +827,10 @@
                             <!-- Point 2: Data Security (Enterprise-Grade) -->
                             <div class="group flex gap-6 items-start transition-all duration-300">
                                 <div class="flex-shrink-0 mt-1">
-                                    <span
-                                        class="material-icons-outlined text-accent-gold text-3xl group-hover:scale-110 transition-transform duration-500">security</span>
+                                    <div
+                                        class="glass-jewel w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-sm border border-gray-100 dark:border-gray-800">
+                                        <span class="material-icons-outlined icon-duotone text-2xl">security</span>
+                                    </div>
                                 </div>
                                 <div class="border-l border-gray-100 dark:border-gray-800 pl-6">
                                     <p
@@ -838,8 +847,10 @@
                             <!-- Point 3: Proactive Compliance -->
                             <div class="group flex gap-6 items-start transition-all duration-300">
                                 <div class="flex-shrink-0 mt-1">
-                                    <span
-                                        class="material-icons-outlined text-accent-gold text-3xl group-hover:scale-110 transition-transform duration-500">speed</span>
+                                    <div
+                                        class="glass-jewel w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-sm border border-gray-100 dark:border-gray-800">
+                                        <span class="material-icons-outlined icon-duotone text-2xl">speed</span>
+                                    </div>
                                 </div>
                                 <div class="border-l border-gray-100 dark:border-gray-800 pl-6">
                                     <p
@@ -1088,9 +1099,9 @@
                 <div
                     class="mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p class="text-gray-500 text-xs">
-                        © 2026 AccoFin Consultancy. All rights reserved.
-                        Strategic excellence for the global economy.
+                        © 2026 AccoFin Consultancy. All rights reserved. Strategic excellence for the global economy.
                     </p>
+
                     <div class="flex gap-8">
                         <a href="index.html#top" class="text-gray-500 hover:text-primary transition text-xs">Privacy
                             Policy</a>

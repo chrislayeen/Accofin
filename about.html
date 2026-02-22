@@ -8,6 +8,16 @@
     <meta name="description"
         content="Learn about AccoFin Consultancy's mission to bridge global excellence with Indian market depth. Discover our leadership and commitment to structured financial compliance." />
     <meta name="keywords" content="About AccoFin, Financial Compliance Team, Corporate Advisory India" />
+
+    <!-- Open Graph / SEO Excellence -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.accofin.com/about.html" />
+    <meta property="og:title" content="About Us | AccoFin Consultancy" />
+    <meta property="og:description"
+        content="Discover AccoFin's mission to bridge global excellence with Indian market depth." />
+    <meta property="og:image" content="https://www.accofin.com/social-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -15,30 +25,7 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#2B7CB6",
-                        secondary: "#1E293B",
-                        "navy-dark": "#0F172A",
-                        "background-light": "#F8F9FB",
-                        "background-dark": "#0F172A",
-                        "card-dark": "#1E293B",
-                        "text-light": "#334155",
-                        "text-dark": "#e2e8f0",
-                        "accent-gold": "#B3902A",
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Google Sans Flex"', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
+    <script src="tailwind.config.js?v=__SITE_VERSION__"></script>
     <script>const VERSION = "__SITE_VERSION__";</script>
     <link rel="stylesheet" href="main.93hf82.css?v=__SITE_VERSION__" />
 </head>
@@ -69,12 +56,15 @@
 
                     <!-- Strategic Segment Switcher (Grouping with Logo) -->
                     <div
-                        class="hidden lg:flex bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full p-1 border border-gray-200/50 dark:border-gray-700/50">
+                        class="hidden lg:flex relative bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full p-1 border border-gray-200/50 dark:border-gray-700/50">
+                        <div id="segment-pill"
+                            class="absolute inset-y-1 bg-white dark:bg-gray-700 shadow-sm rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none">
+                        </div>
                         <a href="global_companies.html" data-segment="global"
-                            class="px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full">Global
+                            class="relative px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full z-10">Global
                             Companies</a>
                         <a href="indian_businesses.html" data-segment="indian"
-                            class="px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full">Indian
+                            class="relative px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full z-10">Indian
                             Businesses</a>
                     </div>
                 </div>
@@ -101,11 +91,14 @@
                 <div class="md:hidden flex items-center gap-4">
                     <!-- Compact Mobile Segment Switcher -->
                     <div
-                        class="flex bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-0.5 border border-gray-200/50 dark:border-gray-700/50">
+                        class="flex relative bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-0.5 border border-gray-200/50 dark:border-gray-700/50">
+                        <div id="mobile-segment-pill"
+                            class="absolute inset-y-0.5 bg-white dark:bg-gray-700 shadow-sm rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none">
+                        </div>
                         <a href="global_companies.html" data-segment="global"
-                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Global</a>
+                            class="relative px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full z-10">Global</a>
                         <a href="indian_businesses.html" data-segment="indian"
-                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Indian</a>
+                            class="relative px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full z-10">Indian</a>
                     </div>
                     <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2 -mr-2">
                         <span class="material-icons-outlined text-2xl">menu</span>
@@ -197,281 +190,295 @@
                     </div>
                 </div>
             </div>
-            </section>
+        </header>
 
-            <!-- Core Pillars Section -->
-            <section class="py-24 md:py-32 bg-gray-50 dark:bg-navy-dark relative overflow-hidden">
-                <div class="absolute inset-0 pattern-bg opacity-5"></div>
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
-                        <!-- Pillar 1 -->
+        <!-- Core Pillars Section -->
+        <section class="py-24 md:py-32 bg-gray-50 dark:bg-navy-dark relative overflow-hidden">
+            <div class="absolute inset-0 pattern-bg opacity-5"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
+                    <!-- Pillar 1 -->
+                    <div
+                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] group flex flex-col items-center text-center">
                         <div
-                            class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] group flex flex-col items-center text-center">
-                            <div
-                                class="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 border border-blue-100 dark:border-blue-800 group-hover:bg-primary transition-colors">
-                                <span
-                                    class="material-icons-outlined text-primary group-hover:text-white text-3xl">checklist</span>
-                            </div>
-                            <h2
-                                class="font-serif text-2xl font-bold text-secondary dark:text-white mb-4 tracking-tight">
-                                What We
-                                Do</h2>
-                            <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                                We manage monthly checklists, enforce disciplined timelines, and provide detailed
-                                reporting.
-                                Our services cover the full spectrum of operations for global subsidiaries and Indian
-                                businesses.
-                            </p>
+                            class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-icons-outlined icon-duotone text-3xl">checklist</span>
                         </div>
-
-                        <!-- Pillar 2 -->
-                        <div
-                            class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] group flex flex-col items-center text-center">
-                            <div
-                                class="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 border border-blue-100 dark:border-blue-800 group-hover:bg-primary transition-colors">
-                                <span
-                                    class="material-icons-outlined text-primary group-hover:text-white text-3xl">shield</span>
-                            </div>
-                            <h2
-                                class="font-serif text-2xl font-bold text-secondary dark:text-white mb-4 tracking-tight">
-                                Why
-                                It
-                                Matters</h2>
-                            <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                                Process discipline is the only reliable defense against regulatory penalties. We ensure
-                                your
-                                business continuity by preventing compliance lapses before they happen.
-                            </p>
-                        </div>
-
-                        <!-- Pillar 3 -->
-                        <div
-                            class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] group flex flex-col items-center text-center">
-                            <div
-                                class="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 border border-blue-100 dark:border-blue-800 group-hover:bg-primary transition-colors">
-                                <span
-                                    class="material-icons-outlined text-primary group-hover:text-white text-3xl">settings_suggest</span>
-                            </div>
-                            <h2
-                                class="font-serif text-2xl font-bold text-secondary dark:text-white mb-4 tracking-tight">
-                                How
-                                We
-                                Work</h2>
-                            <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                                We operate on a calendar-led model, removing ambiguity from deadlines. Our workflows are
-                                secure, client-controlled, and designed for maximum visibility.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Our Philosophy Section -->
-            <section class="py-24 md:py-32 bg-white dark:bg-card-dark relative overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div class="text-center mb-16 md:mb-20">
-                        <span class="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs mb-4 inline-block">The
-                            Founder's Vision</span>
-                        <h2 class="text-4xl md:text-5xl font-serif text-secondary dark:text-white mt-2 tracking-tight">
-                            Our Philosophy</h2>
-                        <p
-                            class="text-lg text-gray-500 dark:text-gray-400 mt-6 max-w-3xl mx-auto font-light leading-relaxed">
-                            Accofin was founded on a simple premise: financial advisory should be an engine for growth,
-                            not a black box of fees and confusion. We believe in ethical guidance, absolute
-                            transparency, and building relationships that outlast any single financial year.
+                        <h2 class="font-serif text-2xl font-bold text-secondary dark:text-white mb-4 tracking-tight">
+                            What We
+                            Do</h2>
+                        <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                            We manage monthly checklists, enforce disciplined timelines, and provide detailed
+                            reporting.
+                            Our services cover the full spectrum of operations for global subsidiaries and Indian
+                            businesses.
                         </p>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Pillar 2 -->
+                    <div
+                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] group flex flex-col items-center text-center">
                         <div
-                            class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                            <span class="material-icons-outlined text-4xl text-[#D4AF37] mb-6 block">visibility</span>
-                            <h3 class="text-xl font-bold text-secondary dark:text-white mb-3">Commitment to Transparency
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">No hidden clauses. Every
-                                step of our process, from pricing to regulatory hurdles, is communicated openly and
-                                proactively.</p>
+                            class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-icons-outlined icon-duotone text-3xl">shield</span>
                         </div>
+                        <h2 class="font-serif text-2xl font-bold text-secondary dark:text-white mb-4 tracking-tight">
+                            Why
+                            It
+                            Matters</h2>
+                        <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                            Process discipline is the only reliable defense against regulatory penalties. We ensure
+                            your
+                            business continuity by preventing compliance lapses before they happen.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div
+                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] group flex flex-col items-center text-center">
                         <div
-                            class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                            <span class="material-icons-outlined text-4xl text-primary mb-6 block">balance</span>
-                            <h3 class="text-xl font-bold text-secondary dark:text-white mb-3">Ethical Financial Guidance
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We optimize for
-                                long-term safety, not short-term loopholes. Compliant structures ensure your business
-                                remains defensible.</p>
+                            class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-icons-outlined icon-duotone text-3xl">settings_suggest</span>
                         </div>
-                        <div
-                            class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:-translate-y-1 transition duration-300">
-                            <span class="material-icons-outlined text-4xl text-[#D4AF37] mb-6 block">handshake</span>
-                            <h3 class="text-xl font-bold text-secondary dark:text-white mb-3">Long-Term Partnerships
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We invest in
-                                understanding your business deeply. Accofin grows alongside you, acting as your
-                                steadfast financial partner.</p>
-                        </div>
+                        <h2 class="font-serif text-2xl font-bold text-secondary dark:text-white mb-4 tracking-tight">
+                            How
+                            We
+                            Work</h2>
+                        <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                            We operate on a calendar-led model, removing ambiguity from deadlines. Our workflows are
+                            secure, client-controlled, and designed for maximum visibility.
+                        </p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Roots Section -->
-            <section
-                class="py-20 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <div class="lg:col-span-5">
+        <!-- Our Philosophy Section -->
+        <section class="py-24 md:py-32 bg-white dark:bg-card-dark relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 md:mb-20">
+                    <span class="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs mb-4 inline-block">The
+                        Founder's Vision</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-secondary dark:text-white mt-2 tracking-tight">
+                        Our Philosophy</h2>
+                    <p
+                        class="text-lg text-gray-500 dark:text-gray-400 mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                        Accofin was founded on a simple premise: financial advisory should be an engine for growth,
+                        not a black box of fees and confusion. We believe in ethical guidance, absolute
+                        transparency, and building relationships that outlast any single financial year.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Pillar 1 -->
+                    <div
+                        class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:-translate-y-1 transition duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-white dark:bg-gray-700 flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary transition-colors duration-300">
+                            <span
+                                class="material-icons-outlined text-primary group-hover:text-white transition-colors">visibility</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-secondary dark:text-white mb-3 tracking-tight">
+                            Continuous Transparency</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                            We provide clear, plain-language updates at every stage, ensuring you are never in the
+                            dark about your compliance status.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div
+                        class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:-translate-y-1 transition duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-white dark:bg-gray-700 flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary transition-colors duration-300">
+                            <span
+                                class="material-icons-outlined text-primary group-hover:text-white transition-colors">balance</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-secondary dark:text-white mb-3 tracking-tight">
+                            Ethical Guidance</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                            Our advisory is rooted in integrity, navigating regulations without shortcuts to
+                            protect your firm’s reputation.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div
+                        class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:-translate-y-1 transition duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-white dark:bg-gray-700 flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary transition-colors duration-300">
+                            <span
+                                class="material-icons-outlined text-primary group-hover:text-white transition-colors">handshake</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-secondary dark:text-white mb-3 tracking-tight">
+                            Long-term Partnerships</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                            We don't just file papers; we invest in your growth, measuring success by your
+                            multi-year stability and expansion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roots Section -->
+        <section
+            class="py-20 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5">
+                        <div
+                            class="bg-white dark:bg-card-dark p-8 md:p-12 rounded-2xl shadow-xl border-t-4 border-primary relative overflow-hidden group">
                             <div
-                                class="bg-white dark:bg-card-dark p-8 md:p-12 rounded-2xl shadow-xl border-t-4 border-primary relative overflow-hidden group">
-                                <div
-                                    class="absolute -right-6 -top-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all">
-                                </div>
-                                <span class="material-icons-outlined text-6xl text-primary mb-6">lock_person</span>
-                                <h3 class="font-serif text-3xl text-secondary dark:text-white mb-4">Confidentiality by
-                                    Design
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 font-light">
-                                    We treat confidentiality not as a policy, but as a design constraint. Our systems
-                                    are
-                                    built
-                                    with permissioned access and least-privilege workflows.
-                                </p>
-                                <ul class="space-y-4">
-                                    <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
-                                        <span class="material-icons-outlined text-primary text-xl">check_circle</span>
-                                        Secure Data Handover
-                                    </li>
-                                    <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
-                                        <span class="material-icons-outlined text-primary text-xl">check_circle</span>
-                                        Role-Based Access Control
-                                    </li>
-                                    <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
-                                        <span class="material-icons-outlined text-primary text-xl">check_circle</span>
-                                        Audit Trails for all Actions
-                                    </li>
-                                </ul>
+                                class="glass-jewel w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-icons-outlined icon-duotone text-4xl">lock_person</span>
                             </div>
+                            <h3 class="font-serif text-3xl text-secondary dark:text-white mb-4">Confidentiality by
+                                Design
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 font-light">
+                                We treat confidentiality not as a policy, but as a design constraint. Our systems
+                                are
+                                built
+                                with permissioned access and least-privilege workflows.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+                                    <span class="material-icons-outlined text-primary text-xl">check_circle</span>
+                                    Secure Data Handover
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+                                    <span class="material-icons-outlined text-primary text-xl">check_circle</span>
+                                    Role-Based Access Control
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+                                    <span class="material-icons-outlined text-primary text-xl">check_circle</span>
+                                    Audit Trails for all Actions
+                                </li>
+                            </ul>
                         </div>
-                        <div class="lg:col-span-7">
-                            <div class="pl-0 lg:pl-10">
-                                <span class="text-primary font-bold uppercase tracking-widest text-xs block mb-3">Our
-                                    Roots</span>
-                                <h2 class="font-serif text-4xl text-secondary dark:text-white mb-6">Based in Trivandrum
-                                    —
-                                    Serving Global Clients</h2>
-                                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 font-light">
-                                    Headquartered in the vibrant capital of Kerala, Accofin leverages the intellectual
-                                    capital
-                                    of Trivandrum to serve clients worldwide.
-                                </p>
-                                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
-                                    Whether you are a local enterprise looking to scale or an international corporation
-                                    establishing a foothold in India, our location allows us to offer premium,
-                                    high-touch
-                                    service with the efficiency of a centralized execution hub. We bridge the gap
-                                    between
-                                    local
-                                    regulatory requirements and global business expectations.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="pl-0 lg:pl-10">
+                            <span class="text-primary font-bold uppercase tracking-widest text-xs block mb-3">Our
+                                Roots</span>
+                            <h2 class="font-serif text-4xl text-secondary dark:text-white mb-6">Based in Trivandrum
+                                —
+                                Serving Global Clients</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 font-light">
+                                Headquartered in the vibrant capital of Kerala, Accofin leverages the intellectual
+                                capital
+                                of Trivandrum to serve clients worldwide.
+                            </p>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                                Whether you are a local enterprise looking to scale or an international corporation
+                                establishing a foothold in India, our location allows us to offer premium,
+                                high-touch
+                                service with the efficiency of a centralized execution hub. We bridge the gap
+                                between
+                                local
+                                regulatory requirements and global business expectations.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Milestones -->
-            <section class="py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2
-                        class="font-serif text-3xl md:text-4xl text-center text-secondary dark:text-white mb-20 relative inline-block left-1/2 transform -translate-x-1/2">
-                        Our Milestones
-                        <span class="absolute -bottom-4 left-1/4 w-1/2 h-1 bg-primary rounded-full"></span>
-                    </h2>
-                    <div class="relative">
-                        <div
-                            class="hidden md:block absolute top-[18px] left-0 w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+        <!-- Milestones -->
+        <section class="py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="font-serif text-3xl md:text-4xl text-center text-secondary dark:text-white mb-20 relative inline-block left-1/2 transform -translate-x-1/2">
+                    Our Milestones
+                    <span class="absolute -bottom-4 left-1/4 w-1/2 h-1 bg-primary rounded-full"></span>
+                </h2>
+                <div class="relative">
+                    <div
+                        class="hidden md:block absolute top-[18px] left-0 w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                        <div class="relative group pt-0 md:pt-12">
+                            <div
+                                class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-secondary dark:border-gray-600 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
+                                <div
+                                    class="w-3 h-3 bg-secondary dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
+                                </div>
+                            </div>
+                            <div
+                                class="md:text-center border-l-4 md:border-l-0 border-secondary dark:border-gray-600 pl-6 md:pl-0 group-hover:border-primary transition-colors">
+                                <span
+                                    class="text-secondary dark:text-white font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2015</span>
+                                <h4
+                                    class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
+                                    Foundation</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                                    Established
+                                    in Trivandrum with a core focus on tax advisory and compliance.</p>
+                            </div>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                            <div class="relative group pt-0 md:pt-12">
+                        <div class="relative group pt-0 md:pt-12">
+                            <div
+                                class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
                                 <div
-                                    class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-secondary dark:border-gray-600 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
-                                    <div
-                                        class="w-3 h-3 bg-secondary dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
-                                    </div>
-                                </div>
-                                <div
-                                    class="md:text-center border-l-4 md:border-l-0 border-secondary dark:border-gray-600 pl-6 md:pl-0 group-hover:border-primary transition-colors">
-                                    <span
-                                        class="text-secondary dark:text-white font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2015</span>
-                                    <h4
-                                        class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
-                                        Foundation</h4>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                                        Established
-                                        in Trivandrum with a core focus on tax advisory and compliance.</p>
+                                    class="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
                                 </div>
                             </div>
-                            <div class="relative group pt-0 md:pt-12">
+                            <div
+                                class="md:text-center border-l-4 md:border-l-0 border-gray-300 dark:border-gray-700 pl-6 md:pl-0 group-hover:border-primary transition-colors">
+                                <span
+                                    class="text-gray-400 dark:text-gray-500 font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2018</span>
+                                <h4
+                                    class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
+                                    Structured Execution</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                                    Pivoted
+                                    to a
+                                    structured execution model, partnering with CAs and legal experts.</p>
+                            </div>
+                        </div>
+                        <div class="relative group pt-0 md:pt-12">
+                            <div
+                                class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
                                 <div
-                                    class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
-                                    <div
-                                        class="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
-                                    </div>
-                                </div>
-                                <div
-                                    class="md:text-center border-l-4 md:border-l-0 border-gray-300 dark:border-gray-700 pl-6 md:pl-0 group-hover:border-primary transition-colors">
-                                    <span
-                                        class="text-gray-400 dark:text-gray-500 font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2018</span>
-                                    <h4
-                                        class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
-                                        Structured Execution</h4>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                                        Pivoted
-                                        to a
-                                        structured execution model, partnering with CAs and legal experts.</p>
+                                    class="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
                                 </div>
                             </div>
-                            <div class="relative group pt-0 md:pt-12">
+                            <div
+                                class="md:text-center border-l-4 md:border-l-0 border-gray-300 dark:border-gray-700 pl-6 md:pl-0 group-hover:border-primary transition-colors">
+                                <span
+                                    class="text-gray-400 dark:text-gray-500 font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2021</span>
+                                <h4
+                                    class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
+                                    Global Expansion</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">Began
+                                    serving
+                                    international clients with Indian subsidiaries, handling FDI compliance.</p>
+                            </div>
+                        </div>
+                        <div class="relative group pt-0 md:pt-12">
+                            <div
+                                class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
                                 <div
-                                    class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
-                                    <div
-                                        class="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
-                                    </div>
-                                </div>
-                                <div
-                                    class="md:text-center border-l-4 md:border-l-0 border-gray-300 dark:border-gray-700 pl-6 md:pl-0 group-hover:border-primary transition-colors">
-                                    <span
-                                        class="text-gray-400 dark:text-gray-500 font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2021</span>
-                                    <h4
-                                        class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
-                                        Global Expansion</h4>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">Began
-                                        serving
-                                        international clients with Indian subsidiaries, handling FDI compliance.</p>
+                                    class="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
                                 </div>
                             </div>
-                            <div class="relative group pt-0 md:pt-12">
-                                <div
-                                    class="hidden md:block absolute top-0 left-1/2 w-10 h-10 bg-white dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700 rounded-full -translate-x-1/2 z-10 group-hover:border-primary transition-colors duration-300 flex items-center justify-center">
-                                    <div
-                                        class="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-primary transition-colors">
-                                    </div>
-                                </div>
-                                <div
-                                    class="md:text-center border-l-4 md:border-l-0 border-gray-300 dark:border-gray-700 pl-6 md:pl-0 group-hover:border-primary transition-colors">
-                                    <span
-                                        class="text-gray-400 dark:text-gray-500 font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2024</span>
-                                    <h4
-                                        class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
-                                        Digital First</h4>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                                        Integrated
-                                        secure client dashboards for real-time compliance visibility.</p>
-                                </div>
+                            <div
+                                class="md:text-center border-l-4 md:border-l-0 border-gray-300 dark:border-gray-700 pl-6 md:pl-0 group-hover:border-primary transition-colors">
+                                <span
+                                    class="text-gray-400 dark:text-gray-500 font-bold text-3xl block mb-2 font-serif group-hover:text-primary transition-colors">2024</span>
+                                <h4
+                                    class="text-lg font-bold text-secondary dark:text-gray-200 mb-3 uppercase tracking-wide text-xs">
+                                    Digital First</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                                    Integrated
+                                    secure client dashboards for real-time compliance visibility.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-secondary dark:bg-navy-dark text-white py-16 md:py-24 border-t border-gray-800">
@@ -571,192 +578,6 @@
         </div>
     </footer>
 
-    <script>
-        const router = {
-            init() {
-                if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('sw.js').catch(() => { });
-                }
-                document.addEventListener('click', e => {
-                    const link = e.target.closest('a');
-                    if (this.shouldHandle(link)) {
-                        e.preventDefault();
-                        this.navigate(link.href);
-                    }
-                });
-                window.addEventListener('popstate', () => this.navigate(window.location.href, false));
-                this.setupPrefetching();
-                this.fadeIn();
-                this.handleHashAction();
-                this.initMobileMenu();
-            },
-            shouldHandle(link) {
-                if (!link || !link.href) return false;
-                const url = new URL(link.href);
-                const isInternal = url.origin === window.location.origin;
-                const href = link.getAttribute('href');
-                const isRelHash = href && href.startsWith('#');
-                return isInternal && !link.hasAttribute('download') && link.target !== '_blank' && !isRelHash;
-            },
-            async navigate(url, addToHistory = true) {
-                const targetUrl = new URL(url);
-                const isSamePage = targetUrl.pathname === window.location.pathname ||
-                    (targetUrl.pathname === '/' && window.location.pathname === '/index.html') ||
-                    (targetUrl.pathname === '/index.html' && window.location.pathname === '/');
-
-                if (isSamePage && targetUrl.hash) {
-                    if (addToHistory) history.pushState(null, '', url);
-                    this.scrollToHash(targetUrl.hash);
-                    return;
-                }
-
-                try {
-                    const response = await fetch(url);
-                    const html = await response.text();
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const newContent = doc.querySelector('#content-area');
-                    const currentContent = document.querySelector('#content-area');
-
-                    if (newContent && currentContent) {
-                        document.body.style.opacity = '0';
-                        setTimeout(() => {
-                            currentContent.innerHTML = newContent.innerHTML;
-                            document.title = doc.title;
-                            if (addToHistory) history.pushState(null, '', url);
-
-                            // Re-execute scripts in the swapped content
-                            currentContent.querySelectorAll('script').forEach(oldScript => {
-                                const newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-
-                            if (targetUrl.hash) {
-                                this.scrollToHash(targetUrl.hash);
-                            } else {
-                                window.scrollTo(0, 0);
-                            }
-
-                            this.updateNavLinks();
-                            this.fadeIn();
-                            this.setupPrefetching();
-                            this.initMobileMenu();
-                        }, 200);
-                    } else { window.location.href = url; }
-                } catch (e) { window.location.href = url; }
-            },
-            scrollToHash(hash) {
-                const el = document.querySelector(hash);
-                if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' });
-                } else if (hash === '#top' || hash === '#') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            },
-            handleHashAction() {
-                if (window.location.hash) {
-                    setTimeout(() => this.scrollToHash(window.location.hash), 500);
-                }
-            },
-            updateNavLinks() {
-                const path = window.location.pathname;
-                const page = path.split('/').pop();
-
-                // Main nav links
-                document.querySelectorAll('nav a:not([data-segment])').forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (!href) return;
-                    const isHome = path === '/' || path === '/index.html';
-                    const isMatch = isHome
-                        ? (href === 'index.html#top' || href === 'index.html' || href === '/' || href === '#top')
-                        : (href.includes(page) && !href.includes('#'));
-                    if (isMatch) {
-                        link.classList.add('text-primary', 'font-bold');
-                        link.classList.remove('text-gray-600', 'dark:text-gray-300', 'font-semibold');
-                    } else {
-                        link.classList.remove('text-primary', 'font-bold');
-                        link.classList.add('text-gray-600', 'dark:text-gray-300', 'font-semibold');
-                    }
-                });
-
-                // Segment toggle pills
-                const ACTIVE_PILL = ['bg-white', 'dark:bg-gray-700', 'shadow-sm', 'text-primary', 'dark:text-white'];
-                const INACTIVE_PILL = ['text-gray-600', 'dark:text-gray-300', 'hover:text-primary'];
-                document.querySelectorAll('[data-segment]').forEach(link => {
-                    const seg = link.getAttribute('data-segment');
-                    const isActive = (seg === 'global' && page === 'global_companies.html') ||
-                        (seg === 'indian' && page === 'indian_businesses.html');
-                    if (isActive) {
-                        link.classList.add(...ACTIVE_PILL);
-                        link.classList.remove(...INACTIVE_PILL);
-                    } else {
-                        link.classList.remove(...ACTIVE_PILL);
-                        link.classList.add(...INACTIVE_PILL);
-                    }
-                });
-            },
-            initMobileMenu() {
-                const btn = document.getElementById('mobile-menu-btn');
-                const closeBtn = document.getElementById('close-menu-btn');
-                const menu = document.getElementById('mobile-menu');
-                const menuPanel = menu ? menu.querySelector('.w-64') : null;
-
-                if (!btn || !menu || !menuPanel) return;
-
-                // Prevent duplicate listener attachments on navigation
-                if (this._menuInitialized) return;
-                this._menuInitialized = true;
-
-                const toggleMenu = () => {
-                    const isOpen = !menu.classList.contains('hidden');
-                    if (isOpen) {
-                        menu.classList.remove('opacity-100');
-                        menu.classList.add('opacity-0');
-                        menuPanel.classList.remove('translate-x-0');
-                        menuPanel.classList.add('translate-x-full');
-                        setTimeout(() => menu.classList.add('hidden'), 300);
-                        document.body.style.overflow = '';
-                    } else {
-                        menu.classList.remove('hidden');
-                        // Trigger reflow
-                        void menu.offsetWidth;
-                        menu.classList.remove('opacity-0');
-                        menu.classList.add('opacity-100');
-                        menuPanel.classList.remove('translate-x-full');
-                        menuPanel.classList.add('translate-x-0');
-                        document.body.style.overflow = 'hidden';
-                    }
-                };
-
-                btn.addEventListener('click', toggleMenu);
-                if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
-
-                menu.addEventListener('click', (e) => {
-                    if (e.target === menu) toggleMenu();
-                });
-
-                // Close on link click
-                menu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', toggleMenu);
-                });
-            },
-            fadeIn() { requestAnimationFrame(() => { document.body.style.opacity = '1'; }); },
-            setupPrefetching() {
-                document.querySelectorAll('a').forEach(link => {
-                    if (this.shouldHandle(link)) {
-                        link.addEventListener('mouseenter', () => {
-                            const p = document.createElement('link');
-                            p.rel = 'prefetch'; p.href = link.href;
-                            document.head.appendChild(p);
-                        }, { once: true });
-                    }
-                });
-            }
-        };
-        router.init();
-    </script>
     <script src="app.a82jd9.js?v=__SITE_VERSION__"></script>
 </body>
 

@@ -128,21 +128,36 @@ const router = {
             }
         });
 
-        // Segment toggle pills
-        const ACTIVE_PILL = ['bg-white', 'dark:bg-gray-700', 'shadow-sm', 'text-primary', 'dark:text-white'];
-        const INACTIVE_PILL = ['text-gray-600', 'dark:text-gray-300', 'hover:text-primary'];
-        document.querySelectorAll('[data-segment]').forEach(link => {
-            const seg = link.getAttribute('data-segment');
-            const isActive = (seg === 'global' && page === 'global_companies.html') ||
-                (seg === 'indian' && page === 'indian_businesses.html');
-            if (isActive) {
-                link.classList.add(...ACTIVE_PILL);
-                link.classList.remove(...INACTIVE_PILL);
+        // Segment toggle pills (Sliding Logic)
+        const updatePill = (containerId, pillId) => {
+            const container = document.querySelector(containerId);
+            const pill = document.getElementById(pillId);
+            if (!container || !pill) return;
+
+            const activeLink = container.querySelector(`[data-segment="${page === 'global_companies.html' ? 'global' : 'indian'}"]`);
+            if (activeLink) {
+                pill.style.opacity = '1';
+                pill.style.left = activeLink.offsetLeft + 'px';
+                pill.style.width = activeLink.offsetWidth + 'px';
+
+                // Update text colors
+                container.querySelectorAll('[data-segment]').forEach(link => {
+                    if (link === activeLink) {
+                        link.classList.add('text-primary', 'dark:text-white');
+                        link.classList.remove('text-gray-600', 'dark:text-gray-300', 'text-gray-500');
+                    } else {
+                        link.classList.remove('text-primary', 'dark:text-white');
+                        link.classList.add('text-gray-600', 'dark:text-gray-300');
+                    }
+                });
             } else {
-                link.classList.remove(...ACTIVE_PILL);
-                link.classList.add(...INACTIVE_PILL);
+                pill.style.opacity = '0';
             }
-        });
+        };
+
+        // Run for desktop and mobile
+        updatePill('nav .hidden.lg\\:flex', 'segment-pill');
+        updatePill('nav .md\\:hidden .flex', 'mobile-segment-pill');
     },
     initMobileMenu() {
         const btn = document.getElementById('mobile-menu-btn');

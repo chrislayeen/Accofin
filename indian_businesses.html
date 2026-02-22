@@ -8,6 +8,16 @@
     <meta name="description"
         content="Comprehensive support for domestic Indian businesses including entity formation, financial compliance, and labor law tracking." />
     <meta name="keywords" content="Private Limited Company Registration, GST Filing India, EPF Compliance" />
+
+    <!-- Open Graph / SEO Excellence -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.accofin.com/indian_businesses.html" />
+    <meta property="og:title" content="Indian Business Support | AccoFin Consultancy" />
+    <meta property="og:description"
+        content="Specialized local compliance, audit, and tax support for Indian startups and SMEs." />
+    <meta property="og:image" content="https://www.accofin.com/social-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -15,32 +25,7 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#2B7CB6",
-                        secondary: "#1E293B",
-                        "navy-dark": "#0F172A",
-                        "background-light": "#F8F9FB",
-                        "background-dark": "#0F172A",
-                        "card-dark": "#1E293B",
-                        "text-light": "#334155",
-                        "text-dark": "#e2e8f0",
-                        "accent-gold": "#B3902A",
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Google Sans Flex"', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
+    <script src="tailwind.config.js?v=__SITE_VERSION__"></script>
     <script>const VERSION = "__SITE_VERSION__";</script>
     <link rel="stylesheet" href="main.93hf82.css?v=__SITE_VERSION__" />
 </head>
@@ -71,12 +56,15 @@
 
                     <!-- Strategic Segment Switcher (Grouping with Logo) -->
                     <div
-                        class="hidden lg:flex bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full p-1 border border-gray-200/50 dark:border-gray-700/50">
+                        class="hidden lg:flex relative bg-gray-100/50 dark:bg-gray-800/80 backdrop-blur-md rounded-full p-1 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden">
+                        <div id="segment-pill"
+                            class="absolute inset-y-1 bg-white dark:bg-gray-700 shadow-sm rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none">
+                        </div>
                         <a href="global_companies.html" data-segment="global"
-                            class="px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full">Global
+                            class="relative px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full z-10">Global
                             Companies</a>
                         <a href="indian_businesses.html" data-segment="indian"
-                            class="px-5 py-1.5 text-xs font-semibold text-primary dark:text-white transition rounded-full bg-white dark:bg-gray-700 shadow-sm">Indian
+                            class="relative px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full z-10">Indian
                             Businesses</a>
                     </div>
                 </div>
@@ -104,11 +92,14 @@
                 <div class="md:hidden flex items-center gap-4">
                     <!-- Compact Mobile Segment Switcher -->
                     <div
-                        class="flex bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-0.5 border border-gray-200/50 dark:border-gray-700/50">
+                        class="flex relative bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-0.5 border border-gray-200/50 dark:border-gray-700/50">
+                        <div id="mobile-segment-pill"
+                            class="absolute inset-y-0.5 bg-white dark:bg-gray-700 shadow-sm rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none">
+                        </div>
                         <a href="global_companies.html" data-segment="global"
-                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Global</a>
+                            class="relative px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full z-10">Global</a>
                         <a href="indian_businesses.html" data-segment="indian"
-                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Indian</a>
+                            class="relative px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full z-10">Indian</a>
                     </div>
                     <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2 -mr-2">
                         <span class="material-icons-outlined text-2xl">menu</span>
@@ -227,9 +218,8 @@
                     <div
                         class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
                         <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">domain_add</span>
+                            class="glass-jewel w-14 h-14 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-icons-outlined icon-duotone text-2xl">domain_add</span>
                         </div>
                         <h3
                             class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4 tracking-tight">
@@ -265,9 +255,8 @@
                     <div
                         class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
                         <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">receipt_long</span>
+                            class="glass-jewel w-14 h-14 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-icons-outlined icon-duotone text-2xl">receipt_long</span>
                         </div>
                         <h3
                             class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4 tracking-tight">
@@ -301,9 +290,8 @@
                     <div
                         class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
                         <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">groups</span>
+                            class="glass-jewel w-14 h-14 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-icons-outlined icon-duotone text-2xl">groups</span>
                         </div>
                         <h3
                             class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4 tracking-tight">
@@ -336,9 +324,8 @@
                     <div
                         class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
                         <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">policy</span>
+                            class="glass-jewel w-14 h-14 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-icons-outlined icon-duotone text-2xl">policy</span>
                         </div>
                         <h3
                             class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4 tracking-tight">
@@ -395,8 +382,9 @@
                             class="flex gap-6 p-8 rounded-2xl bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
                             <div class="flex-shrink-0">
                                 <div
-                                    class="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-primary dark:bg-blue-900/30 dark:text-blue-300 border border-blue-100 dark:border-blue-800 transition-colors group-hover:bg-primary group-hover:text-white">
-                                    <span class="material-icons-outlined">admin_panel_settings</span>
+                                    class="glass-jewel flex h-14 w-14 items-center justify-center rounded-xl group-hover:scale-110 transition-all duration-500">
+                                    <span
+                                        class="material-icons-outlined icon-duotone text-2xl">admin_panel_settings</span>
                                 </div>
                             </div>
                             <div>
@@ -414,8 +402,8 @@
                             class="flex gap-6 p-8 rounded-2xl bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
                             <div class="flex-shrink-0">
                                 <div
-                                    class="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-primary dark:bg-blue-900/30 dark:text-blue-300 border border-blue-100 dark:border-blue-800 transition-colors group-hover:bg-primary group-hover:text-white">
-                                    <span class="material-icons-outlined">account_tree</span>
+                                    class="glass-jewel flex h-14 w-14 items-center justify-center rounded-xl group-hover:scale-110 transition-all duration-500">
+                                    <span class="material-icons-outlined icon-duotone text-2xl">account_tree</span>
                                 </div>
                             </div>
                             <div>
@@ -433,8 +421,8 @@
                             class="flex gap-6 p-8 rounded-2xl bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
                             <div class="flex-shrink-0">
                                 <div
-                                    class="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-primary dark:bg-blue-900/30 dark:text-blue-300 border border-blue-100 dark:border-blue-800 transition-colors group-hover:bg-primary group-hover:text-white">
-                                    <span class="material-icons-outlined">event_available</span>
+                                    class="glass-jewel flex h-14 w-14 items-center justify-center rounded-xl group-hover:scale-110 transition-all duration-500">
+                                    <span class="material-icons-outlined icon-duotone text-2xl">event_available</span>
                                 </div>
                             </div>
                             <div>
@@ -690,67 +678,12 @@
                         }
                     });
                 },
-                initMobileMenu() {
-                    const btn = document.getElementById('mobile-menu-btn');
-                    const closeBtn = document.getElementById('close-menu-btn');
-                    const menu = document.getElementById('mobile-menu');
-                    const menuPanel = menu ? menu.querySelector('.w-64') : null;
-
-                    if (!btn || !menu || !menuPanel) return;
-
-                    // Prevent duplicate listener attachments on navigation
-                    if (this._menuInitialized) return;
-                    this._menuInitialized = true;
-
-                    const toggleMenu = () => {
-                        const isOpen = !menu.classList.contains('hidden');
-                        if (isOpen) {
-                            menu.classList.remove('opacity-100');
-                            menu.classList.add('opacity-0');
-                            menuPanel.classList.remove('translate-x-0');
-                            menuPanel.classList.add('translate-x-full');
-                            setTimeout(() => menu.classList.add('hidden'), 300);
-                            document.body.style.overflow = '';
-                        } else {
-                            menu.classList.remove('hidden');
-                            // Trigger reflow
-                            void menu.offsetWidth;
-                            menu.classList.remove('opacity-0');
-                            menu.classList.add('opacity-100');
-                            menuPanel.classList.remove('translate-x-full');
-                            menuPanel.classList.add('translate-x-0');
-                            document.body.style.overflow = 'hidden';
-                        }
-                    };
-
-                    btn.addEventListener('click', toggleMenu);
-                    if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
-
-                    menu.addEventListener('click', (e) => {
-                        if (e.target === menu) toggleMenu();
-                    });
-
-                    // Close on link click
-                    menu.querySelectorAll('a').forEach(link => {
-                        link.addEventListener('click', toggleMenu);
-                    });
-                },
-                fadeIn() { requestAnimationFrame(() => { document.body.style.opacity = '1'; }); },
-                setupPrefetching() {
-                    document.querySelectorAll('a').forEach(link => {
-                        if (this.shouldHandle(link)) {
-                            link.addEventListener('mouseenter', () => {
-                                const p = document.createElement('link');
-                                p.rel = 'prefetch'; p.href = link.href;
-                                document.head.appendChild(p);
-                            }, { once: true });
-                        }
-                    });
-                }
             };
-            router.init();
+            router.updateNavLinks();
         </script>
         <script src="app.a82jd9.js?v=__SITE_VERSION__"></script>
+
+
 </body>
 
 </html>
