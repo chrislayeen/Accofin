@@ -67,33 +67,3 @@ section[id] {
 .dark .pattern-bg {
     background-image: radial-gradient(#334155 1px, transparent 1px);
 }
-
-/* Premium Icon Containers */
-.glass-jewel {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-}
-
-.dark .glass-jewel {
-    background-color: rgba(31, 41, 55, 0.8);
-    border-color: rgba(55, 65, 81, 0.5);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Premium Duotone Icons */
-.icon-duotone {
-    background: linear-gradient(135deg, #1A2B3C 0%, #2B7CB6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.dark .icon-duotone {
-    background: linear-gradient(135deg, #2B7CB6 0%, #ffffff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
