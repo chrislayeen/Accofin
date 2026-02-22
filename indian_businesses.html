@@ -31,7 +31,7 @@
                         "card-dark": "#1E293B",
                         "text-light": "#334155",
                         "text-dark": "#e2e8f0",
-                        "accent-gold": "#EAF4FA",
+                        "accent-gold": "#B3902A",
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
@@ -41,7 +41,8 @@
             },
         };
     </script>
-    <link rel="stylesheet" href="main.93hf82.css" />
+    <script>const VERSION = "__SITE_VERSION__";</script>
+    <link rel="stylesheet" href="main.93hf82.css?v=__SITE_VERSION__" />
 </head>
 
 <body id="top"
@@ -100,9 +101,17 @@
                         Schedule Consultation
                     </a>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
-                        <span class="material-icons-outlined">menu</span>
+                <div class="md:hidden flex items-center gap-4">
+                    <!-- Compact Mobile Segment Switcher -->
+                    <div
+                        class="flex bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-0.5 border border-gray-200/50 dark:border-gray-700/50">
+                        <a href="global_companies.html" data-segment="global"
+                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Global</a>
+                        <a href="indian_businesses.html" data-segment="indian"
+                            class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 transition rounded-full">Indian</a>
+                    </div>
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2 -mr-2">
+                        <span class="material-icons-outlined text-2xl">menu</span>
                     </button>
                 </div>
             </div>
@@ -741,6 +750,8 @@
             };
             router.init();
         </script>
+        <script src="app.a82jd9.js?v=__SITE_VERSION__"></script>
 </body>
 
 </html>
+```
